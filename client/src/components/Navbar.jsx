@@ -33,6 +33,12 @@ const Navbar = ({setShowLogin}) => {
                 <button onClick={() => setShowLogin(true)} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg'> Login </button>
             </div>
         </div>
+
+        <div>
+            <button className='sm:hidden cursor-pointer' aria-label="Menu" onClick={()=> setOpen(!open)}>
+                <img src={open ? assets.close_icon : assets.menu_icon} alt="menu" />
+            </button>
+        </div>
     </div>
   )
 }
