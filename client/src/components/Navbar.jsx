@@ -21,6 +21,10 @@ const Navbar = () => {
                     {link.name}
                 </Link>
             )) }
+
+            <div>
+                <input type="text" className='py-1.5 w-full bg-transparent outline-none placeholder-gray-500' placeholder='Search Cars' /> 
+            </div>
         </div>
     </div>
   )
