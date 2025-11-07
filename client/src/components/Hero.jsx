@@ -1,7 +1,9 @@
-import React from 'react'
+import React { useState } from 'react'
 import { assets, cityList } from '../assets/assets'
 
 const Hero = () => {
+    const [pickupLocation, setPickupLocation] = useState('')
+
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
         <h1 className='text-4xl md:text-5xl font-semibold'>Luxury cars on Rent</h1>
@@ -12,7 +14,7 @@ const Hero = () => {
                         <option value="">Pickup Location</option>
                         {cityList.map((city) => <option key={city} value={city}> {city} </option>)}
                     </select>
-                    <p className='px-1 text-sm text-gray-500'>Please select location</p>
+                    <p className='px-1 text-sm text-gray-500'> {pickupLocation ? pickupLocation : 'Please select location'}</p>
                 </div>
             </div>
         </form>
