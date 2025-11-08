@@ -6,6 +6,7 @@ import CarDetails from './pages/CarDetails.jsx'
 import Cars from './pages/Cars.jsx';
 import MyBookings from './pages/MyBookings.jsx';
 import Hero from './components/Hero.jsx';
+import CarCard from './components/CarCard.jsx'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/my-bookings' element={<MyBookings />} />
       </Routes>
       <Hero />
+      <App />
     </>
   )
 }
