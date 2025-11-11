@@ -5,8 +5,7 @@ import Home from './pages/Home.jsx'
 import CarDetails from './pages/CarDetails.jsx'
 import Cars from './pages/Cars.jsx';
 import MyBookings from './pages/MyBookings.jsx';
-import Hero from './components/Hero.jsx';
-import CarCard from './components/CarCard.jsx'
+import Footer from './components/Footer.jsx';
 
 
 const App = () => {
@@ -23,8 +22,8 @@ const App = () => {
         <Route path='/cars/*' element={<Cars />} />
         <Route path='/my-bookings' element={<MyBookings />} />
       </Routes>
-      <Hero />
-      <App />
+
+      {!isOwnerpath && <Footer />}
     </>
   )
 }
