@@ -18,9 +18,9 @@ const CarDetails = () => {
           <img src={assets.arrow_icon} alt="Arrow" className='rotate-180 opacity-65' />
           Back to all cars
         </button>
-        <div>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12'>
           {/* Left: Car Image & Details */}
-          <div>
+          <div className='lg:col-span-2'>
             <img src={car.image} alt="Car" className='w-full h-full md:max-h-100 object-cover rounded-xl mb-6 shadow-md' />
             <div className='space-y-6'>
               <div>
