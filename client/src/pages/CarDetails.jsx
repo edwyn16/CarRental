@@ -9,6 +9,10 @@ const CarDetails = () => {
   const [car, setCar] = useState(null);
   const currency = import.meta.env.VITE_CURRENCY;
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  }
+
   useEffect(() => {
     setCar(dummyCarData.find((car => car._id === id)));
   }, [id]);
@@ -69,7 +73,7 @@ const CarDetails = () => {
           </div>
 
           {/* Right: Booking Form */}
-          <form className='shadow-lg h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500'>
+          <form onSubmit={handleSubmit} className='shadow-lg h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500'>
             <p className='flex items-center justify-between text-2xl text-gray-800 font-semibold'>
               {currency}{car.pricePerDay}
               <span className='text-base text-gray-400 font-normal'> per day </span>
