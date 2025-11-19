@@ -71,7 +71,53 @@ const AddCar = () => {
           </div>
 
           {/* Car Transmission, Fuel Type, Seating Capacity */}
-          <div></div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+            <div className='flex flex-col w-full'>
+              <label> Transmission </label>
+              <select className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none' onChange={e => setCar({...car, transmission: e.target.value})} value={car.transmission}>
+                <option value=""> Select a transmission </option>
+                <option value="Automatic"> Automatic </option>
+                <option value="Manual"> Manual </option>
+                <option value="Semi-Automatic"> Semi-Automatic </option>
+              </select>
+            </div>
+            <div className='flex flex-col w-full'>
+              <label> Fuel Type </label>
+              <select className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none' onChange={e => setCar({...car, fuelType: e.target.value})} value={car.fuelType}>
+                <option value=""> Select a Fuel Type </option>
+                <option value="Gas"> Gas </option>
+                <option value="Diesel"> Diesel </option>
+                <option value="Petrol"> Petrol </option>
+                <option value="Hybride"> Hybride </option>
+                <option value="Electric"> Electric </option>
+              </select>
+            </div>
+            <div className='flex flex-col w-full'>
+              <label> Seating Capacity </label>
+              <input className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none' type="number" placeholder='5' required value={car.seat} onChange={e => setCar({...car, seat: e.target.value})} />
+            </div>
+          </div>
+
+          {/* Car Location */}
+          <div className='flex flex-col w-full'>
+            <label> Location </label>
+            <select className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none' onChange={e => setCar({...car, location: e.target.value})} value={car.location}>
+              <option value=""> Select a Location </option>
+              <option value="Rotterdam"> Rotterdam </option>
+              <option value="Amsterdam"> Amsterdam </option>
+              <option value="Utrecht"> Utrecht </option>
+              <option value="Den Haag"> Den Haag </option>
+            </select>
+          </div>
+
+          {/* Car Description */}
+          <div className='flex flex-col w-full'>
+            <label> Description </label>
+            <textarea rows={5} placeholder="e.g. A luxurious SUV with a spacious interior and a powerful engine." className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none" required value={car.description} onChange={e => setCar({...car, description: e.target.value})}></textarea>
+          </div>
+          <button className='flex items-center gap-2 px-4 py-2.5 mt-4 bg-primary text-white rounded-md font-medium w-max cursor-pointer'>
+            <img src={assets.tick_icon} alt="Tick Icon" /> List Your Car
+          </button>
 
         </form>
     </div>
