@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { dummyMyBookingsData } from '../../assets/assets'
 import Title from '../../components/owner/Title'
-import { assets } from '../../assets/assets'
 
 const ManageBookings = () => {
   const currency = import.meta.env.VITE_CURRENCY;
