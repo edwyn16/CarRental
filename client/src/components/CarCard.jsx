@@ -30,15 +30,15 @@ const CarCard = ({ car }) => {
             </div>
             <div className='flex items-center text-sm text-muted-foreground'>
               <img className='h-4 mr-2' src={assets.fuel_icon} alt="User Icon" />
-              <span>{car.fuel_type} Seats</span>
+              <span>{car.fuel_type} </span>
             </div>
             <div className='flex items-center text-sm text-muted-foreground'>
               <img className='h-4 mr-2' src={assets.car_icon} alt="User Icon" />
-              <span>{car.transmission} Seats</span>
+              <span>{car.transmission} </span>
             </div>
             <div className='flex items-center text-sm text-muted-foreground'>
               <img className='h-4 mr-2' src={assets.location_icon} alt="User Icon" />
-              <span>{car.location} Seats</span>
+              <span>{car.location} </span>
             </div>
           </div>
         </div>
